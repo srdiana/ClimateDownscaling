@@ -1,0 +1,114 @@
+{
+    "global_metrics": {
+        "rmse": 1.756616278630866,
+        "mae": 1.454882025718689,
+        "r_squared": 0.19351816177368164,
+        "correlation": 0.6597630664802748,
+        "bias": 0.5984711050987244,
+        "psnr": 18.001187738390794,
+        "spectral_rmse": 0.274929016828537,
+        "spectral_mae": 0.07073649019002914,
+        "spectral_correlation": 0.9923258006171283,
+        "spectral_bias": -0.07073649019002914,
+        "band_0_energy_true": 0.04218514864624012,
+        "band_0_energy_pred": 0.008692942900097478,
+        "band_0_relative_error": 0.7939335719071299,
+        "band_0_freq_range": "0.00-0.12",
+        "band_1_energy_true": 0.0009558562660458847,
+        "band_1_energy_pred": 1.1365442439625895e-05,
+        "band_1_relative_error": 0.9881096741807829,
+        "band_1_freq_range": "0.12-0.25",
+        "band_2_energy_true": 0.0002844627110789588,
+        "band_2_energy_pred": 9.591233536276889e-07,
+        "band_2_relative_error": 0.9966282984859781,
+        "band_2_freq_range": "0.25-0.50"
+    },
+    "channel_statistics": {
+        "channel_0": {
+            "mse_map_mean": 1.3743938573453107,
+            "mse_map_std": 2.1023285370340252,
+            "mse_map_min": 0.00023230637907545315,
+            "mse_map_max": 12.244575023651123,
+            "rmse_map_mean": 0.9453104437414701,
+            "rmse_map_std": 0.6933844693232002,
+            "rmse_map_min": 0.015241600279349054,
+            "rmse_map_max": 3.499224917556904,
+            "mae_map_mean": 0.9291612464373555,
+            "mae_map_std": 0.6979319720475192,
+            "mae_map_min": 0.010522052645683289,
+            "mae_map_max": 3.490396499633789,
+            "bias_map_mean": -0.3698324981356576,
+            "bias_map_std": 1.1006645335042922,
+            "bias_map_min": -2.062441796064377,
+            "bias_map_max": 3.490396499633789
+        },
+        "channel_1": {
+            "mse_map_mean": 0.6998013817037212,
+            "mse_map_std": 0.4303236138854329,
+            "mse_map_min": 4.960676786680551e-05,
+            "mse_map_max": 9.137759402394295,
+            "rmse_map_mean": 0.7893369982565106,
+            "rmse_map_std": 0.2770351690437921,
+            "rmse_map_min": 0.007043207214529863,
+            "rmse_map_max": 3.0228727069452157,
+            "mae_map_mean": 0.7717833112518188,
+            "mae_map_std": 0.28320016022251493,
+            "mae_map_min": 0.006097421050071716,
+            "mae_map_max": 2.7793396413326263,
+            "bias_map_mean": -0.49283836915965484,
+            "bias_map_std": 0.6560575735613074,
+            "bias_map_min": -2.7793396413326263,
+            "bias_map_max": 1.3317925035953522
+        },
+        "channel_2": {
+            "mse_map_mean": 7.182902507313822,
+            "mse_map_std": 1.0529999375351364,
+            "mse_map_min": 0.4607542993617244,
+            "mse_map_max": 44.139663364272565,
+            "rmse_map_mean": 2.672589320027944,
+            "rmse_map_std": 0.20042164001523322,
+            "rmse_map_min": 0.6787888474052328,
+            "rmse_map_max": 6.643768762101264,
+            "mae_map_mean": 2.6637046039989847,
+            "mae_map_std": 0.21268088826165618,
+            "mae_map_min": 0.4583689430728555,
+            "mae_map_max": 4.860686540603638,
+            "bias_map_mean": 2.6580837583399766,
+            "bias_map_std": 0.23561178762873694,
+            "bias_map_min": -3.1450830791145563,
+            "bias_map_max": 2.9977040886878967
+        }
+    },
+    "spectral_metrics": {
+        "channel_0": {
+            "spectral_rmse": 0.05789584293961525,
+            "spectral_mae": 0.010254353284835815,
+            "spectral_correlation": 0.9995895668928685,
+            "spectral_bias": -0.010254353284835815
+        },
+        "channel_1": {
+            "spectral_rmse": 0.09436795860528946,
+            "spectral_mae": 0.02234664373099804,
+            "spectral_correlation": 0.8587822632959136,
+            "spectral_bias": 0.020027123391628265
+        },
+        "channel_2": {
+            "spectral_rmse": 0.9891211986541748,
+            "spectral_mae": 0.2636358439922333,
+            "spectral_correlation": 0.9931389456515185,
+            "spectral_bias": -0.2636358439922333
+        }
+    },
+    "predictions_shape": [
+        4,
+        3,
+        721,
+        1440
+    ],
+    "targets_shape": [
+        4,
+        3,
+        721,
+        1440
+    ]
+}

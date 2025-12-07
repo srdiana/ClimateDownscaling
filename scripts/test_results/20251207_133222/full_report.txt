@@ -1,0 +1,126 @@
+
+        ========================================
+        ПОЛНЫЙ ОТЧЕТ О ТЕСТИРОВАНИИ МОДЕЛИ DOWNSCALING
+        ========================================
+        Дата: 2025-12-07 13:32:34
+        Модель: WeatherUNet
+        Устройство: cpu
+        Переменные: ['T2M', '10u', '10v']
+        
+        СВОДКА:
+        --------
+        
+        Общее качество модели:
+        - RMSE: 1.756616
+        - MAE: 1.454882
+        - R²: 0.193518 (Плохое соответствие)
+        - PSNR: 18.00 dB (Плохое качество)
+        - Correlation: 0.659763 (Умеренная корреляция)
+        
+            
+        ДЕТАЛЬНЫЕ МЕТРИКИ:
+        ------------------
+        
+Глобальные метрики:
+  RMSE: 1.756616
+  MAE: 1.454882
+  R_SQUARED: 0.193518
+  CORRELATION: 0.659763
+  BIAS: 0.598471
+  PSNR: 18.001188
+  SPECTRAL_RMSE: 0.274929
+  SPECTRAL_MAE: 0.070736
+  SPECTRAL_CORRELATION: 0.992326
+  SPECTRAL_BIAS: -0.070736
+  BAND_0_ENERGY_TRUE: 0.042185
+  BAND_0_ENERGY_PRED: 0.008693
+  BAND_0_RELATIVE_ERROR: 0.793934
+  BAND_1_ENERGY_TRUE: 0.000956
+  BAND_1_ENERGY_PRED: 0.000011
+  BAND_1_RELATIVE_ERROR: 0.988110
+  BAND_2_ENERGY_TRUE: 0.000284
+  BAND_2_ENERGY_PRED: 0.000001
+  BAND_2_RELATIVE_ERROR: 0.996628
+
+Статистика по каналам:
+
+  channel_0:
+    mse_map_mean: 1.374394
+    mse_map_std: 2.102329
+    mse_map_min: 0.000232
+    mse_map_max: 12.244575
+    rmse_map_mean: 0.945310
+    rmse_map_std: 0.693384
+    rmse_map_min: 0.015242
+    rmse_map_max: 3.499225
+    mae_map_mean: 0.929161
+    mae_map_std: 0.697932
+    mae_map_min: 0.010522
+    mae_map_max: 3.490396
+    bias_map_mean: -0.369832
+    bias_map_std: 1.100665
+    bias_map_min: -2.062442
+    bias_map_max: 3.490396
+
+  channel_1:
+    mse_map_mean: 0.699801
+    mse_map_std: 0.430324
+    mse_map_min: 0.000050
+    mse_map_max: 9.137759
+    rmse_map_mean: 0.789337
+    rmse_map_std: 0.277035
+    rmse_map_min: 0.007043
+    rmse_map_max: 3.022873
+    mae_map_mean: 0.771783
+    mae_map_std: 0.283200
+    mae_map_min: 0.006097
+    mae_map_max: 2.779340
+    bias_map_mean: -0.492838
+    bias_map_std: 0.656058
+    bias_map_min: -2.779340
+    bias_map_max: 1.331793
+
+  channel_2:
+    mse_map_mean: 7.182903
+    mse_map_std: 1.053000
+    mse_map_min: 0.460754
+    mse_map_max: 44.139663
+    rmse_map_mean: 2.672589
+    rmse_map_std: 0.200422
+    rmse_map_min: 0.678789
+    rmse_map_max: 6.643769
+    mae_map_mean: 2.663705
+    mae_map_std: 0.212681
+    mae_map_min: 0.458369
+    mae_map_max: 4.860687
+    bias_map_mean: 2.658084
+    bias_map_std: 0.235612
+    bias_map_min: -3.145083
+    bias_map_max: 2.997704
+
+        ФАЙЛЫ РЕЗУЛЬТАТОВ:
+        ------------------
+        Директория: test_results/20251207_133222
+        
+        Основные файлы:
+        - spatial_metrics.zarr: Пространственные метрики в формате Zarr
+        - predictions.npy: Массив предсказаний
+        - targets.npy: Массив целей
+        - all_metrics.json: Все метрики в JSON формате
+        - comprehensive_report.html: HTML отчет
+        - full_report.txt: Текстовый отчет
+        
+        Визуализации:
+        - *_spatial_metrics.png: Карты пространственных метрик
+        - *_spectral_analysis.png: Спектральный анализ
+        - *_distributions.png: Распределения значений
+        - energy_spectra_*.png: Energy Spectra анализ
+        - summary_visualization.png: Сводная визуализация
+        
+        ВЫВОДЫ:
+        -------
+        ✗ Модель имеет низкую объясняющую способность (R² < 0.6)
+✗ Низкое отношение сигнал/шум (PSNR < 25 dB)
+✗ Слабая корреляция с целевыми значениями
+
+❌ ВЫВОД: Модель показывает плохие результаты, требуется значительная доработка.

@@ -1,0 +1,105 @@
+
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <title>Comprehensive Downscaling Model Report</title>
+            <style>
+                body { font-family: Arial, sans-serif; margin: 40px; }
+                h1 { color: #333; border-bottom: 2px solid #333; padding-bottom: 10px; }
+                h2 { color: #555; margin-top: 30px; border-bottom: 1px solid #ddd; padding-bottom: 5px; }
+                h3 { color: #777; }
+                table { border-collapse: collapse; width: 100%; margin: 20px 0; }
+                th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+                th { background-color: #f2f2f2; font-weight: bold; }
+                tr:nth-child(even) { background-color: #f9f9f9; }
+                .metric-value { font-weight: bold; color: #0066cc; }
+                .good { color: green; }
+                .bad { color: red; }
+                .summary { background-color: #f0f8ff; padding: 15px; border-radius: 5px; margin: 20px 0; }
+                .images { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; margin: 20px 0; }
+                .image-container { border: 1px solid #ddd; padding: 10px; border-radius: 5px; }
+                .image-container img { max-width: 100%; height: auto; }
+                .image-title { text-align: center; font-weight: bold; margin-top: 10px; }
+            </style>
+        </head>
+        <body>
+            <h1>Comprehensive Downscaling Model Report</h1>
+            <p>Generated on: 2025-12-07 13:32:34</p>
+            <p>Model: WeatherUNet</p>
+            <p>Device: cpu</p>
+            <p>Variables: ['T2M', '10u', '10v']</p>
+            
+            <div class="summary">
+                <h2>Executive Summary</h2>
+        
+                <p><strong>Overall Performance:</strong></p>
+                <ul>
+                    <li>RMSE: <span class="metric-value">1.7566</span></li>
+                    <li>MAE: <span class="metric-value">1.4549</span></li>
+                    <li>R²: <span class="metric-value bad">0.1935</span></li>
+                    <li>PSNR: <span class="metric-value bad">18.00 dB</span></li>
+                    <li>Correlation: <span class="metric-value ">0.6598</span></li>
+                </ul>
+            
+            </div>
+            
+            <h2>Detailed Metrics</h2>
+            <h3>Global Metrics</h3>
+        <table><tr><th>Metric</th><th>Value</th><th>Interpretation</th></tr><tr><td>RMSE</td><td class='metric-value'>1.756616</td><td>Меньше лучше</td></tr><tr><td>MAE</td><td class='metric-value'>1.454882</td><td>Меньше лучше</td></tr><tr><td>R_SQUARED</td><td class='metric-value'>0.193518</td><td>Плохое соответствие</td></tr><tr><td>CORRELATION</td><td class='metric-value'>0.659763</td><td>Умеренная корреляция</td></tr><tr><td>BIAS</td><td class='metric-value'>0.598471</td><td></td></tr><tr><td>PSNR</td><td class='metric-value'>18.001188</td><td>Плохое качество</td></tr><tr><td>SPECTRAL_RMSE</td><td class='metric-value'>0.274929</td><td></td></tr><tr><td>SPECTRAL_MAE</td><td class='metric-value'>0.070736</td><td></td></tr><tr><td>SPECTRAL_CORRELATION</td><td class='metric-value'>0.992326</td><td></td></tr><tr><td>SPECTRAL_BIAS</td><td class='metric-value'>-0.070736</td><td></td></tr><tr><td>BAND_0_ENERGY_TRUE</td><td class='metric-value'>0.042185</td><td></td></tr><tr><td>BAND_0_ENERGY_PRED</td><td class='metric-value'>0.008693</td><td></td></tr><tr><td>BAND_0_RELATIVE_ERROR</td><td class='metric-value'>0.793934</td><td></td></tr><tr><td>BAND_1_ENERGY_TRUE</td><td class='metric-value'>0.000956</td><td></td></tr><tr><td>BAND_1_ENERGY_PRED</td><td class='metric-value'>0.000011</td><td></td></tr><tr><td>BAND_1_RELATIVE_ERROR</td><td class='metric-value'>0.988110</td><td></td></tr><tr><td>BAND_2_ENERGY_TRUE</td><td class='metric-value'>0.000284</td><td></td></tr><tr><td>BAND_2_ENERGY_PRED</td><td class='metric-value'>0.000001</td><td></td></tr><tr><td>BAND_2_RELATIVE_ERROR</td><td class='metric-value'>0.996628</td><td></td></tr></table><h3>Channel-wise Statistics</h3><h4>channel_0</h4><table><tr><th>Metric</th><th>Mean</th><th>Std</th><th>Min</th><th>Max</th></tr><tr><td>mse_map_mean</td><td>1.374394</td><tr><td>mse_map_std</td><td>2.102329</td><tr><td>mse_map_min</td><td>0.000232</td><tr><td>mse_map_max</td><td>12.244575</td><tr><td>rmse_map_mean</td><td>0.945310</td><tr><td>rmse_map_std</td><td>0.693384</td><tr><td>rmse_map_min</td><td>0.015242</td><tr><td>rmse_map_max</td><td>3.499225</td><tr><td>mae_map_mean</td><td>0.929161</td><tr><td>mae_map_std</td><td>0.697932</td><tr><td>mae_map_min</td><td>0.010522</td><tr><td>mae_map_max</td><td>3.490396</td><tr><td>bias_map_mean</td><td>-0.369832</td><tr><td>bias_map_std</td><td>1.100665</td><tr><td>bias_map_min</td><td>-2.062442</td><tr><td>bias_map_max</td><td>3.490396</td></table><h4>channel_1</h4><table><tr><th>Metric</th><th>Mean</th><th>Std</th><th>Min</th><th>Max</th></tr><tr><td>mse_map_mean</td><td>0.699801</td><tr><td>mse_map_std</td><td>0.430324</td><tr><td>mse_map_min</td><td>0.000050</td><tr><td>mse_map_max</td><td>9.137759</td><tr><td>rmse_map_mean</td><td>0.789337</td><tr><td>rmse_map_std</td><td>0.277035</td><tr><td>rmse_map_min</td><td>0.007043</td><tr><td>rmse_map_max</td><td>3.022873</td><tr><td>mae_map_mean</td><td>0.771783</td><tr><td>mae_map_std</td><td>0.283200</td><tr><td>mae_map_min</td><td>0.006097</td><tr><td>mae_map_max</td><td>2.779340</td><tr><td>bias_map_mean</td><td>-0.492838</td><tr><td>bias_map_std</td><td>0.656058</td><tr><td>bias_map_min</td><td>-2.779340</td><tr><td>bias_map_max</td><td>1.331793</td></table><h4>channel_2</h4><table><tr><th>Metric</th><th>Mean</th><th>Std</th><th>Min</th><th>Max</th></tr><tr><td>mse_map_mean</td><td>7.182903</td><tr><td>mse_map_std</td><td>1.053000</td><tr><td>mse_map_min</td><td>0.460754</td><tr><td>mse_map_max</td><td>44.139663</td><tr><td>rmse_map_mean</td><td>2.672589</td><tr><td>rmse_map_std</td><td>0.200422</td><tr><td>rmse_map_min</td><td>0.678789</td><tr><td>rmse_map_max</td><td>6.643769</td><tr><td>mae_map_mean</td><td>2.663705</td><tr><td>mae_map_std</td><td>0.212681</td><tr><td>mae_map_min</td><td>0.458369</td><tr><td>mae_map_max</td><td>4.860687</td><tr><td>bias_map_mean</td><td>2.658084</td><tr><td>bias_map_std</td><td>0.235612</td><tr><td>bias_map_min</td><td>-3.145083</td><tr><td>bias_map_max</td><td>2.997704</td></table><h3>Spectral Metrics</h3><h4>channel_0</h4><table><tr><th>Metric</th><th>Value</th></tr><tr><td>spectral_rmse</td><td>0.057896</td></tr><tr><td>spectral_mae</td><td>0.010254</td></tr><tr><td>spectral_correlation</td><td>0.999590</td></tr><tr><td>spectral_bias</td><td>-0.010254</td></tr></table><h4>channel_1</h4><table><tr><th>Metric</th><th>Value</th></tr><tr><td>spectral_rmse</td><td>0.094368</td></tr><tr><td>spectral_mae</td><td>0.022347</td></tr><tr><td>spectral_correlation</td><td>0.858782</td></tr><tr><td>spectral_bias</td><td>0.020027</td></tr></table><h4>channel_2</h4><table><tr><th>Metric</th><th>Value</th></tr><tr><td>spectral_rmse</td><td>0.989121</td></tr><tr><td>spectral_mae</td><td>0.263636</td></tr><tr><td>spectral_correlation</td><td>0.993139</td></tr><tr><td>spectral_bias</td><td>-0.263636</td></tr></table>
+            <h2>Visualizations</h2>
+            <div class="images">
+        
+                <div class="image-container">
+                    <img src="channel_2_spectral_analysis.png" alt="channel_2_spectral_analysis">
+                    <div class="image-title">channel_2_spectral_analysis</div>
+                </div>
+            
+                <div class="image-container">
+                    <img src="energy_spectra_channel_0.png" alt="energy_spectra_channel_0">
+                    <div class="image-title">energy_spectra_channel_0</div>
+                </div>
+            
+                <div class="image-container">
+                    <img src="channel_0_spectral_analysis.png" alt="channel_0_spectral_analysis">
+                    <div class="image-title">channel_0_spectral_analysis</div>
+                </div>
+            
+                <div class="image-container">
+                    <img src="summary_visualization.png" alt="summary_visualization">
+                    <div class="image-title">summary_visualization</div>
+                </div>
+            
+                <div class="image-container">
+                    <img src="T2M_spatial_metrics.png" alt="T2M_spatial_metrics">
+                    <div class="image-title">T2M_spatial_metrics</div>
+                </div>
+            
+                <div class="image-container">
+                    <img src="channel_1_spectral_analysis.png" alt="channel_1_spectral_analysis">
+                    <div class="image-title">channel_1_spectral_analysis</div>
+                </div>
+            
+                <div class="image-container">
+                    <img src="10u_spatial_metrics.png" alt="10u_spatial_metrics">
+                    <div class="image-title">10u_spatial_metrics</div>
+                </div>
+            
+                <div class="image-container">
+                    <img src="10v_spatial_metrics.png" alt="10v_spatial_metrics">
+                    <div class="image-title">10v_spatial_metrics</div>
+                </div>
+            
+            </div>
+            
+            <h2>Files Generated</h2>
+            <ul>
+        <li>predictions.npy (47.53 MB)</li><li>channel_2_spectral_analysis.png (0.37 MB)</li><li>energy_spectra_channel_0.png (0.10 MB)</li><li>channel_0_spectral_analysis.png (0.40 MB)</li><li>summary_visualization.png (0.37 MB)</li><li>T2M_spatial_metrics.png (2.12 MB)</li><li>all_metrics.json (0.00 MB)</li><li>channel_1_spectral_analysis.png (0.40 MB)</li><li>targets.npy (47.53 MB)</li><li>10u_spatial_metrics.png (1.84 MB)</li><li>10v_spatial_metrics.png (2.29 MB)</li>
+            </ul>
+            
+            <footer style="margin-top: 50px; padding-top: 20px; border-top: 1px solid #ddd; text-align: center; color: #777;">
+                <p>Report generated by Downscaling Model Tester</p>
+                <p>For more information, contact the development team</p>
+            </footer>
+        </body>
+        </html>
+        
